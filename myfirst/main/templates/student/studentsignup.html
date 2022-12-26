@@ -16,52 +16,52 @@
   </head>
 {% block main%}
 <br><br><br>
-<h3 style="text-align: center;color: red;">STUDENT SIGNUP</h3>
+<h3 style="text-align: center;color: red;">РЕГИСТРАЦИЯ УЧЕНИКА</h3>
 <form method="POST" autocomplete="off" enctype="multipart/form-data">
     {% csrf_token %}
     <div class="form-row">
       <div class="form-group col-md-6">
-        <label for="username">Username</label>
-        {% render_field userForm.username|attr:'required:true'  class="form-control" placeholder="username" %}
+        <label for="username">Логин</Логин></label>
+        {% render_field userForm.username|attr:'required:true'  class="form-control" placeholder="Логин" %}
       </div>
       <div class="form-group col-md-6">
-        <label for="inputPassword4">Password</label>
-        {% render_field userForm.password|attr:'required:true'  class="form-control" placeholder="password" %}
+        <label for="inputPassword4">Пароль</label>
+        {% render_field userForm.password|attr:'required:true'  class="form-control" placeholder="Пароль" %}
       </div>
     </div>
 
     <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="first_name">First Name</label>
-          {% render_field userForm.first_name|attr:'required:true'  class="form-control" placeholder="First Name" %}
+          <label for="first_name">Имя</label>
+          {% render_field userForm.first_name|attr:'required:true'  class="form-control" placeholder="Имя" %}
         </div>
         <div class="form-group col-md-6">
-          <label for="last_name">Last Name</label>
-          {% render_field userForm.last_name|attr:'required:true'  class="form-control" placeholder="Last Name" %}
+          <label for="last_name">Фамилия</label>
+          {% render_field userForm.last_name|attr:'required:true'  class="form-control" placeholder="Фамилия" %}
         </div>
       </div>
 
       <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="mobile">Mobile</label>
-          {% render_field studentForm.mobile|attr:'required:true'  class="form-control" placeholder="Mobile" %}
+          <label for="mobile">Телефон</label>
+          {% render_field studentForm.mobile|attr:'required:true'  class="form-control" placeholder="Телефон" %}
         </div>
         <div class="form-group col-md-6">
-          <label for="address">Address</label>
-          {% render_field studentForm.address|attr:'required:true'  class="form-control" placeholder="Address" %}
+          <label for="address">Адрес</label>
+          {% render_field studentForm.address|attr:'required:true'  class="form-control" placeholder="Адрес" %}
         </div>
       </div>
 
       <div class="form-row">
         <div class="form-group col-md-12">
-          <label for="profile_pic">Profile Picture</label>
+          <label for="profile_pic">Фото профиля</label>
           {% render_field studentForm.profile_pic|attr:'required:true' class="form-control" placeholder="" %}
         </div>
         
       </div>
 
 
-    <button type="submit" class="dark-button">Sign Up</button>
+    <button type="submit" class="dark-button">Регистрация</button>
   </form>
 
 
