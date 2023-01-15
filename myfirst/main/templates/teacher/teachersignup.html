@@ -1,3 +1,4 @@
+{% extends 'quiz/custom_base.html'%}
 <!DOCTYPE html>
 {% load widget_tweaks %}
 <html lang="en" dir="ltr">
@@ -13,13 +14,14 @@
     </style>
   </head>
   <body>
-    {% include "quiz/navbar.html" %}
+    {% block title %}Регистрация{% endblock %}
+    {% block main %}
  
 
 
 <br><br><br>
-<h3 style="text-align: center;color: red;">TEACHER SIGNUP</h3>
-<form method="POST" autocomplete="off" enctype="multipart/form-data">
+<h3 style="text-align: center;color: #46467a;font-family: 'Source Sans Pro', sans-serif!important;"><b>РЕГИСТРАЦИЯ УЧИТЕЛЯ</b></h3>
+<form method="POST" autocomplete="off" enctype="multipart/form-data" style="font-family: 'Source Sans Pro', sans-serif!important;">
     {% csrf_token %}
     <div class="form-row">
       <div class="form-group col-md-6">
@@ -63,11 +65,11 @@
       </div>
 
 
-    <button type="submit" class="btn btn-primary">Sign Up</button>
+    <button type="submit" class="dark-button">Sign Up</button>
   </form>
 
 
 <br><br>
-{% include "quiz/footer.html" %}
+{% endblock %}
   </body>
 </html>

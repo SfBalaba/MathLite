@@ -1,3 +1,5 @@
+{% extends 'quiz/custom_base.html'%}
+
 <!DOCTYPE html>
 {% load static %}
 <html lang="en" dir="ltr">
@@ -5,6 +7,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="../../../static/css/main.css">
 
   <style media="screen">
     .jumbotron {
@@ -24,9 +27,7 @@
   <title></title>
 </head>
 
-<body>
-
-  {% include "quiz/navbar.html" %}
+  {% block main %}
   <br><br>
   <center>
     <h3 class='alert alert-success' style="margin-bottom:0px;">About Us !</h3>
@@ -41,7 +42,6 @@
     </p>
   </div>
 
-  {% include "quiz/footer.html" %}
-</body>
+  {% endblock %}
 
 </html>

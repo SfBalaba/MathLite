@@ -1,18 +1,16 @@
+{% extends 'quiz/custom_base.html'%}
+
 <!DOCTYPE html>
 {% load static %}
 <html lang="en" dir="ltr">
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
-
+  <link rel="stylesheet" href="../../../static/css/main.css">
 
 </head>
 
-<body>
-
-  {% include "quiz/navbar.html" %}
+{% block main %}
   <br><br>
 
   <center>
@@ -31,7 +29,6 @@
     </form>
   </center>
 
-  {% include "quiz/footer.html" %}
-</body>
+  {% endblock %}
 
 </html>

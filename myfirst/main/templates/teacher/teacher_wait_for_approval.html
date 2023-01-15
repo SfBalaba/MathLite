@@ -1,3 +1,4 @@
+{% extends 'quiz/custom_base.html'%}
 <!DOCTYPE html>
 {% load widget_tweaks %}
 
@@ -16,8 +17,11 @@
       margin: 0px;
     }
   </style>
+  <link rel="stylesheet" href="../../../static/css/main.css">
+  <link rel="stylesheet" href="../../../static/css/home.css">
+  <link rel="stylesheet" href="../../../static/css/quiz.css">
   <body>
-    {% include "quiz/navbar.html" %}
+    {% block main %}
 
       <div class="jumbotron" style="margin-top: 0px;
         margin-bottom: 0px;">
@@ -30,6 +34,6 @@
         </p>
       </div>
 
-{% include "quiz/footer.html" %}
+{% endblock %}
   </body>
 </html>

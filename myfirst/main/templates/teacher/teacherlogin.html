@@ -1,6 +1,7 @@
+{% extends 'quiz/custom_base.html'%}
 <!DOCTYPE html>
 {% load widget_tweaks %}
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" >
   <head>
     <meta charset="utf-8">
     <title></title>
@@ -76,8 +77,9 @@
     </style>
   </head>
   <body>
-    {% include "quiz/navbar.html" %}
-    <div class="container">
+    {% block title %}Вход{% endblock %}
+    {% block main %}
+    <div class="container" style="font-family: 'Source Sans Pro', sans-serif!important;">
     <div class="row">
         <div class="col-md-6">
             <div class="card">
@@ -89,7 +91,7 @@
                      {% render_field form.username class="form-control" placeholder="Username" %}
                      {% render_field form.password class="form-control" placeholder="Password" %}
 
-                     <input type="submit" name="" value="Войти">
+                     <input class="dark-button" type="submit" name="" value="Войти">
 
                 </form>
             </div>
@@ -99,6 +101,6 @@
 <br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br>
-{% include "quiz/footer.html" %}
+{% endblock %}
   </body>
 </html>

@@ -2,12 +2,25 @@
     display: flex;
     flex-wrap:wrap;
     align-content: flex-start;
-    background-color: #b6b6b6;
     padding: 10px;
     padding-top: 30px;
     width: 70%;
-    min-height: 100vh;
     margin: auto;
+}
+
+.grade-link {
+    text-align: center;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    text-decoration: none;
+    color: black;
+    font-family: 'Source Sans Pro', sans-serif
+}
+
+.grade-link:hover {
+    text-decoration: underline;
+    color: #46467A;
 }
 
 .grade {
@@ -19,18 +32,8 @@
     font-size: xx-large;
     background-color: #FEFDF8;
     text-align: center;
-}
-
-.grade>a {
-    text-align: center;
-    top: 50%;
-    width: 100%;
-    transform: translateY(-50%);
-    text-decoration: none;
-    color: #7766C6;
-}
-
-.grade>a:hover {
-    text-decoration: underline;
-    color: #46467A;
+    display:flex;
+    flex-direction:column;
+    font-family: 'Source Sans Pro', sans-serif;
+    filter: drop-shadow(0px 4px 17px rgba(0, 0, 0, 0.17))
 }

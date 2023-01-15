@@ -1,3 +1,5 @@
+{% extends 'quiz/custom_base.html'%}
+
 <!DOCTYPE html>
 {% load static %}
 <html lang="en" dir="ltr">
@@ -18,10 +20,7 @@
   </style>
 
 </head>
-
-<body>
-
-  {% include "quiz/navbar.html" %}
+  {% block main %}
   <br><br>
   <div class="jumbotron">
     <h1 class="display-4">Your message sent successfully !</h1>
@@ -33,7 +32,7 @@
     </p>
   </div>
 
-  {% include "quiz/footer.html" %}
+  {% endblock %}
 </body>
 
 </html>

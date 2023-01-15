@@ -37,12 +37,10 @@ def password_reset_form(request):
 
 def login(request):
     return render(request, 'main/login.html')
-
 def help(request):
     return render(request, 'main/help.html')
-
 def training(request):
-    return render(request, 'main/training.html')
+    return render(request, 'quiz/index.html')
 
 def create(request):
     error = ""
@@ -59,3 +57,5 @@ def create(request):
         "error": error
     }
     return render(request, 'main/create.html', context)
+
+

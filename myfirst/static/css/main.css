@@ -1,26 +1,64 @@
+html {
+    font-family: 'Source Sans Pro', sans-serif!important;
+    height: 100%;
+}
+
 main {
-    padding: 5vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
     padding-top: 0%;
+    font-family: 'Source Sans Pro', sans-serif!important;
+    display: flex;
+    flex: 1 0 auto;
 }
 
 header {
+    height: 10vh;
+    background-color: #46467A;
+    justify-content: space-around;
+    min-width: 100vw;
+}
+
+footer {
+    background-color: #F7DBA7;
+    padding-left: 10%;
+    min-width: 100vw;
+    color: black;
+}
+  
+  footer .link-holder {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+  
+  .footer-btn {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: transparent;
+    border: none;    
+    color: #46467A;
+    font-family: 'Source Sans Pro', sans-serif!important
+}
+  
+  .footer-btn:hover{
+    text-decoration: underline;
+}
+
+.head {
     display: flex;
     height: 10vh;
     background-color: #46467A;
-    align-items: center;
+    justify-content: space-around;
+    min-width: 100vw;
 }
 
-header:first-child {
-    color: black;
-    padding: 30px;
-}
-
-.link-holder{
+header .link-holder{
     display: flex;
     align-items: center;
     flex-direction: row;
     position: relative;
-    left: 50%;
 }
 
 .divider {
@@ -34,15 +72,16 @@ form {
     height: inherit;
 }
 
-.header-btn {
+header .header-btn {
     padding-left: 20px;
     padding-right: 20px;
     background-color: transparent;
     border: none;    
     color: #d9d9d9;
+    font-family: 'Source Sans Pro', sans-serif!important
 }
 
-.header-btn:hover {
+header .header-btn:hover {
     background-color: #313155;
 }
 
@@ -51,6 +90,8 @@ form {
     background-color: #d9d9d9;
     border: none;
     padding: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
     border-radius: 50em;
     position: relative;
     left: 8%;
@@ -73,4 +114,3 @@ form {
     background-color: #35355b;
     color: #d9d9d9;
 }
-

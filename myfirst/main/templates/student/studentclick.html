@@ -1,3 +1,4 @@
+{% extends 'quiz/custom_base.html'%}
 <!DOCTYPE html>
 {% load static %}
 <html lang="en" dir="ltr">
@@ -19,24 +20,20 @@
   </style>
 
 </head>
-
-<body>
-
-  {% include "quiz/navbar.html" %}
+{% block title %}Вход{% endblock %}
+{% block main %}
   <br><br>
-  <div class="jumbotron" style="margin-bottom:0px;">
+  <div class="jumbotron" style="font-family: 'Source Sans Pro', sans-serif!important;">
     <h1 class="display-4">Привет, ученик</h1>
     <p class="lead">Добро пожаловать на онлайн викторину</p>
     <hr class="my-4">
     <p>Вы можете получить доступ к различным функциям после входа в систему.</p>
     <p class="lead">
-      <a class="btn btn-primary btn-lg" href="studentsignup" role="button">Создать аккаунт</a>
-      <a class="btn btn-primary btn-lg" href="studentlogin" role="button">Войти</a>
+      <a href="studentsignup" role="button"><button class="dark-button">Создать аккаунт</button></a>
+      <a href="studentlogin" role="button"><button class="dark-button">Войти</button></a>
     </p>
     <br><br><br><br><br><br>
   </div>
- 
-  {% include "quiz/footer.html" %}
-</body>
+  {% endblock %}
 
 </html>
