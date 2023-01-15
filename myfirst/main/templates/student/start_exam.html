@@ -6,25 +6,26 @@
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-
-
+  <link rel="stylesheet" href="../../../static/css/main.css">
+  <link rel="stylesheet" href="../../../static/css/home.css">
+  <link rel="stylesheet" href="../../../static/css/quiz.css">
 </head>
 
 
-<div class="jumbotron my-4">
+<div class="jumbotron my-4" style="font-family: 'Source Sans Pro', sans-serif!important;">
 
-  <form class="form" autocomplete="off" onsubmit="return saveAns()"  action="/student/calculate-marks" method="POST">
+  <form class="form" style="font-family: 'Source Sans Pro', sans-serif!important;" autocomplete="off" onsubmit="return saveAns()"  action="/student/calculate-marks" method="POST">
     {% csrf_token %}
-    <h1 style="text-align: center;">{{course.course_name}}</h1>
+    <h1 style="text-align: center; font-family: 'Source Sans Pro', sans-serif!important;">{{course.course_name}}</h1>
     {% for q in questions%}
-    <h3 class="text-info">{{ forloop.counter }}. {{q.question}}</h3><h4 style="text-align: right;">[Количество баллов: {{q.marks}}]</h4>
+    <h3 style="font-family: 'Source Sans Pro', sans-serif!important;">{{ forloop.counter }}. {{q.question}}</h3><h4 style="font-family: 'Source Sans Pro', sans-serif!important; text-align: right; color: #CACACA;">[Количество баллов: {{q.marks}}]</h4>
     
         <input type="hidden" name="csrfmiddlewaretoken" value="C24rUotmdHawVQJL3KrqiWxvti8UffOFYUc8TRbZtLt36AVLdP3jbkzUVe3beRAa">
         
         
-          <div class="form-check mx-4">
+          <div class="form-check mx-4" style="font-family: 'Source Sans Pro', sans-serif!important;">
             <input class="form-check-input" type="radio" name="{{ forloop.counter }}" id="{{q.option1}}" value="Option1">
-            <label class="form-check-label" for="option1">
+            <label class="form-check-label" for="option1" style="font-weight: bolder;">
               {{q.option1}}
             </label>
           </div>
@@ -32,7 +33,7 @@
         
           <div class="form-check mx-4">
             <input class="form-check-input" type="radio" name="{{ forloop.counter }}" id="{{q.option2}}" value="Option2">
-            <label class="form-check-label" for="option2">
+            <label class="form-check-label" for="option2" style="font-weight: bolder;">
               {{q.option2}}
             </label>
           </div>
@@ -40,7 +41,7 @@
         
           <div class="form-check mx-4">
             <input class="form-check-input" type="radio" name="{{ forloop.counter }}" id="{{q.option3}}" value="Option3">
-            <label class="form-check-label" for="option3">
+            <label class="form-check-label" for="option3" style="font-weight: bolder;">
               {{q.option3}}
             </label>
           </div>
@@ -48,13 +49,13 @@
         
           <div class="form-check mx-4">
             <input class="form-check-input" type="radio" name="{{ forloop.counter }}" id="{{q.option4}}" value="Option4">
-            <label class="form-check-label" for="option4">
+            <label class="form-check-label" for="option4" style="font-weight: bolder;">
               {{q.option4}}
             </label>
           </div>
 
         {% endfor %}
-        <input class="btn btn-info btn-lg"   type="submit" value="Завершить">
+        <input class="btn btn-info btn-lg dark-button"   type="submit" value="Завершить">
     </form>
   </div>
 

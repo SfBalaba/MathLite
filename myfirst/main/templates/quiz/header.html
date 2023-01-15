@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/css/main.css">
+    <link rel="stylesheet" href="../../../static/css/home.css">
+    <link rel="stylesheet" href="../../../static/css/quiz.css">
+</head>
+<header class="head" style="position:absolute; top:0%; left:0%; z-index:4; min-width: 100vw;">
+    <div>
+        <a style="width: fit-content; height: fit-content;" href="{%url 'home'%}">
+        <img style="height: 10vh;" src="../../../static/media/logo_with_bg.png" alt="logo">
+        </a>
+    </div>
+    <div class="link-holder">
+        <form action="/"><button class="header-btn">Главная</button></button></form>
+        <div class="divider"></div>
+        <form action="/training"><button class="header-btn">Тесты</button></button></form>
+        <div class="divider"></div>
+        <form action="/blog"><button class="header-btn">Библиотека</button></button></form>
+        <div class="divider"></div>
+        <form action="/help"><button class="header-btn">Помощь</button></button></form>
+        <a href="/logout"><button class="btn-profile">Выйти</button></a>
+        <!-- <a href="{%url 'login'%}"><button type="button" class="btn-profile ">Войти</button></a>
+        <a href="{%url 'register'%}"><button type="button" class="btn-profile ">Регистрация</button></a> -->
+    </div>
+</header>

@@ -1,30 +1,25 @@
 {% extends 'teacher/teacherbase.html' %}
 {% block content %}
-{%load static%}
+
 
 <head>
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-
-  <style media="screen">
-    a:link {
-      text-decoration: none;
-    }
-
-    h6 {
-      text-align: center;
-    }
-
-    .row {
-      margin: 100px;
+  <link rel="stylesheet" href="../../../static/css/font.css">
+  <link rel="stylesheet" href="../../../static/css/main.css">
+  <link rel="stylesheet" href="../../../static/css/home.css">
+  <link rel="stylesheet" href="../../../static/css/quiz.css">
+  <style>
+    panel-heading {
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     }
   </style>
 </head>
 <br><br>
 <div class="container">
   <div class="panel panel-primary">
-    <div class="panel-heading">
+    <div class="panel-heading" style="background-color: #46467a">
       <h6 class="panel-title">Экзамены</h6>
     </div>
     <table class="table table-hover" id="dev-table">
@@ -33,7 +28,7 @@
 
           <th>Название курса</th>
           <th>Количество вопросов</th>
-          <th>Оцнека</th>
+          <th>Оценка</th>
           <th>Удалить</th>
         </tr>
       </thead>

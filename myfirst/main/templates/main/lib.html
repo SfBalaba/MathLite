@@ -5,22 +5,34 @@
 {% endblock%}
 
 {% block main %}
-    <h1>Дополнительные материалы</h1>
+<style>
 
+    summary:hover {
+        text-decoration: underline;
+    }
 
+    details summary::-webkit-details-marker,
+    details summary::marker { 
+        color: #46467A;
+    }
+</style>
+    <div style="font-size:larger; font-family: 'Source Sans Pro', sans-serif!important; background-color: #F7DBA7; border-radius: 80px; padding: 5% 10%; margin: 10vh;">
+        <div style="text-decoration: underline; display: flex; flex-direction: row; justify-content: flex-start; color: #46467A;">
+            <h2>Библиотека</h2>
+        </div>
     {% if articles %}
 
         {% for el in articles %}
-            {% if el.article_type == "l" %}
-
-                <div class = "alert alert-warning mt-2">
-                    <h3>{{el.title}}</h3>
-                    <h3>{{el.article_type}}</h3>
-                    <p>{{el.task}}</p>
-                </div>
-    {% endif %}
+            {% if el.article_type == "" %}
+            <details>
+                <summary><a>{{el.title}}</summary>
+                <div style="margin: 10px 0; border-radius: 10px; background-color: white; padding: 15px 20px;">{{ el.task|linebreaks }}</div>
+              </details>
+            {% endif %}
         {% endfor %}
     {% else %}
-        <p>У вас нет статей</p>
+        <p style="font-family: 'Source Sans Pro', sans-serif!important;">У вас нет статей</p>
     {% endif %}
+    </div>
+    <br><br>
 {% endblock%}

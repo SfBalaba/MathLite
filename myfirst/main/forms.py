@@ -9,14 +9,14 @@ class FormTask(ModelForm):
         widgets = {
             "article_type": TextInput(attrs={
                 'class': 'form-control',
-                'placeholder': 'Введите название',}),
+                'placeholder': 'Введите номер класса (5 или 6)',}),
             "title": TextInput(attrs={
                 'class': 'form-control',
                 'placeholder': 'Введите название',
             }),
             "task": Textarea(attrs={
                 "class" : "form-control",
-                "placeholder": "Введите название",
+                "placeholder": "Введите текст статьи",
                                }),
 
         }

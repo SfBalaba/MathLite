@@ -20,24 +20,27 @@
       margin: 100px;
     }
   </style>
+  <link rel="stylesheet" href="../../../static/css/main.css">
+  <link rel="stylesheet" href="../../../static/css/home.css">
+  <link rel="stylesheet" href="../../../static/css/quiz.css">
 </head>
 <br><br>
 <div class="container">
   <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h6 class="panel-title">Pending Teachers</h6>
+    <div class="panel-heading" style="background-color: #46467a;">
+      <h6 class="panel-title">Ожидающие учителя</h6>
     </div>
     <table class="table table-hover" id="dev-table">
       <thead>
         <tr>
 
-          <th>Name</th>
-          <th>Profile Picture</th>
-          <th>Mobile</th>
-          <th>Address</th>
+          <th>Имя</th>
+          <th>Изображение профиля</th>
+          <th>Номер телефона</th>
+          <th>Адрес</th>
          
-          <th>Approve</th>
-          <th>Reject</th>
+          <th>Принять</th>
+          <th>Отклонить</th>
         </tr>
       </thead>
       {% for t in teachers %}

@@ -3,13 +3,14 @@
 {% block title %}New Article{% endblock %}
 
 {% block main %}
-<div style="display: flex; flex-direction: row; justify-content: flex-start; padding-top: 30px;">
-    <h2>Создание новой статьи</h2>
-</div>
-<form method="post">     <!-- action="/blog" -->
+<h1 style="font-family: 'Source Sans Pro', sans-serif!important;">Создать статью</h1>
+<form method="post" style="font-family: 'Source Sans Pro', sans-serif!important;">
     {% csrf_token %}
     {{ form.title }}<br>
+    {{ form.article_type }}<br>
     {{ form.task }}<br>
-     <button type="submit" class="btn-success dark-button">Добавить</button>
+
+    <button type="submit" class="btn btn-success dark-button">Добавить</button>
+    <span>{{error}}</span>
 </form>
 {% endblock %}

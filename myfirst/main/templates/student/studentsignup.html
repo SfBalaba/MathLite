@@ -14,10 +14,11 @@
 
     </style>
   </head>
+  {% block title %}Регистрация{% endblock %}
 {% block main%}
 <br><br><br>
-<h3 style="text-align: center;color: red;">STUDENT SIGNUP</h3>
-<form method="POST" autocomplete="off" enctype="multipart/form-data">
+<h3 style="text-align: center;color: #46467a;">РЕГИСТРАЦИЯ УЧЕНИКА</h3>
+<form method="POST" autocomplete="off" enctype="multipart/form-data" style="font-family: 'Source Sans Pro', sans-serif!important;">
     {% csrf_token %}
     <div class="form-row">
       <div class="form-group col-md-6">

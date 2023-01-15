@@ -1,65 +1,16 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-  <style>
-    /*---------------------------------------
-   Social section
------------------------------------------*/
-    footer {
-      padding: 0px 0px 0px 0px;
-      background-color: #212529;
-      margin: 0px;
-    }
-
-    .fa {
-      padding: 20px;
-      font-size: 23px;
-      width: 60px;
-      text-align: center;
-      text-decoration: none;
-      margin: 5px 2px;
-      border-radius: 50%;
-    }
-
-    .fa:hover {
-      opacity: 0.5;
-      text-decoration: none;
-    }
-
-
-
-    p {
-      text-align: center;
-
-    }
-  </style>
-</head>
-
-<footer>
-
-  <br>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 col-sm-12">
-        <div style="color:#ffffff;" class="wow fadeInUp footer-copyright">
-                        <!-- <p>
-            Договор услуг копирайтинга<br>
-Лицензионное соглашение<br>
-Cогласие на обработку персональных данных<br>
-Политика конфиденциальности<br>
-                Соглашение об использовании курсов<br>
-            <a href="https://vk.com/id262161011">Связаться с нами</a>
-            </p>> -->
-        </div>
-      </div>
-    </div>
+  <footer style="margin-top: -100px; justify-content: center;">
+    <div>
+      <a style="width: fit-content; height: fit-content;" href="{%url 'home'%}">
+        <img style="height: 10vh;" src="../../../static/media/logo_with_bg.png" alt="logo">
+      </a>
   </div>
-</footer>
-
+  <div class="link-holder">
+      <form action="/"><button class="footer-btn">Главная</button></button></form>
+      <form action="/training"><button class="footer-btn">Тесты</button></button></form>
+      <form action="/lib"><button class="footer-btn">Библиотека</button></button></form>
+      <form action="/help"><button class="footer-btn">Помощь</button></button></form>
+    </div>
+  </footer>
 </html>

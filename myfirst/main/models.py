@@ -1,9 +1,8 @@
 from django.db import models
 
 class Task(models.Model):
-    Category=[("l", 'Библиотека'),("5", '5класс'),("6", '6класс'),("8", '8класс'),('9', '9класс'),\
-              ("7", '7класс'),("10", '10класс'),("11", "11класс")]
-    article_type = models.CharField(max_length=2, choices=Category, default='l')
+    Category=[("5", '5класс'),("6", '6класс')]
+    article_type = models.CharField(max_length=2, choices=Category, default='', blank=True)
     title = models.CharField('Название', max_length = 50)
     task = models.TextField('Описание')
 

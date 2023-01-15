@@ -3,14 +3,15 @@
 {% block title %}Blog{% endblock %}
 
 {% block main %}
-<div style="display: flex; flex-direction: row; justify-content: flex-start; padding-top: 30px;">
+<div style="display: flex; flex-direction: row; justify-content: flex-start; padding-top: 30px; font-family: 'Source Sans Pro', sans-serif!important;">
     <h2>Мои статьи</h2>
     <form action="/create"><button class="dark-button new-article-btn">Создать новую статью</button></form>
 </div>
-<div class="article">
-    Тут лежат статьи авторства user'a
+<div class="article" style="font-family: 'Source Sans Pro', sans-serif!important;">
+
     {% if articles %}
         {% for el in articles %}
+
             <div class = "alert alert-warning mt-2">
                 <h3>{{el.title}}</h3>
                 <p>{{el.task}}</p>
