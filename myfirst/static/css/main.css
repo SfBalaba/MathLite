@@ -18,13 +18,6 @@ header {
     justify-content: space-around;
     min-width: 100vw;
 }
-
-footer {
-    background-color: #F7DBA7;
-    padding-left: 10%;
-    min-width: 100vw;
-    color: black;
-}
   
   footer .link-holder {
     display: flex;
